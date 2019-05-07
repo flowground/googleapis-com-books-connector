@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "page_size": {
+            "type": "integer"
+        },
+        "page_token": {
+            "type": "string"
+        },
+        "series_id": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

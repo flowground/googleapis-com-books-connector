@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryId": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "locale": {
+            "type": "string"
+        },
+        "maxAllowedMaturityRating": {
+            "type": "string",
+            "enum": [
+                "mature",
+                "not-mature"
+            ]
+        },
+        "pageSize": {
+            "type": "integer"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

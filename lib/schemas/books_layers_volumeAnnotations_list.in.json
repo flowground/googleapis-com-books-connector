@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "contentVersion": {
+            "required": true,
+            "type": "string"
+        },
+        "endOffset": {
+            "type": "string"
+        },
+        "endPosition": {
+            "type": "string"
+        },
+        "layerId": {
+            "required": true,
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 200
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "showDeleted": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "startOffset": {
+            "type": "string"
+        },
+        "startPosition": {
+            "type": "string"
+        },
+        "updatedMax": {
+            "type": "string"
+        },
+        "updatedMin": {
+            "type": "string"
+        },
+        "volumeAnnotationsVersion": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

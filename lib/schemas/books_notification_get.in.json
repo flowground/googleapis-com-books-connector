@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "locale": {
+            "type": "string"
+        },
+        "notification_id": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

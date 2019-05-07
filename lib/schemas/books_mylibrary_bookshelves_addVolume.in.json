@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "reason": {
+            "type": "string",
+            "enum": [
+                "IOS_PREX",
+                "IOS_SEARCH",
+                "ONBOARDING"
+            ]
+        },
+        "shelf": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "cpksver": {
+            "required": true,
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeIds": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

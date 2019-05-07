@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "cpksver": {
+            "required": true,
+            "type": "string"
+        },
+        "licenseTypes": {
+            "type": "string",
+            "enum": [
+                "BOTH",
+                "CONCURRENT",
+                "DOWNLOAD"
+            ]
+        },
+        "locale": {
+            "type": "string"
+        },
+        "nonce": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "required": true,
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

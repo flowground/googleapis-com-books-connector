@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "locale": {
+            "type": "string"
+        },
+        "rating": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "HAVE_IT",
+                "NOT_INTERESTED"
+            ]
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

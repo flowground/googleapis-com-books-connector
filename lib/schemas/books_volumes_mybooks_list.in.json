@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "acquireMethod": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "FAMILY_SHARED",
+                    "PREORDERED",
+                    "PREVIOUSLY_RENTED",
+                    "PUBLIC_DOMAIN",
+                    "PURCHASED",
+                    "RENTED",
+                    "SAMPLE",
+                    "UPLOADED"
+                ],
+                "type": "string"
+            }
+        },
+        "country": {
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+        },
+        "processingState": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "COMPLETED_FAILED",
+                    "COMPLETED_SUCCESS",
+                    "RUNNING"
+                ],
+                "type": "string"
+            }
+        },
+        "source": {
+            "type": "string"
+        },
+        "startIndex": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

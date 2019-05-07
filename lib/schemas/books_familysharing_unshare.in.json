@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "docId": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

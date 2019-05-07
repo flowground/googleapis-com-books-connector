@@ -1,0 +1,98 @@
+{
+    "type": "object",
+    "properties": {
+        "alt": {
+            "type": "string",
+            "enum": [
+                "json"
+            ],
+            "default": "json"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "kind": {
+                    "default": "books#usersettings",
+                    "description": "Resource type.",
+                    "type": "string"
+                },
+                "notesExport": {
+                    "description": "User settings in sub-objects, each for different purposes.",
+                    "properties": {
+                        "folderName": {
+                            "type": "string"
+                        },
+                        "isEnabled": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "notification": {
+                    "properties": {
+                        "matchMyInterests": {
+                            "properties": {
+                                "opted_state": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "moreFromAuthors": {
+                            "properties": {
+                                "opted_state": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "moreFromSeries": {
+                            "properties": {
+                                "opted_state": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "priceDrop": {
+                            "properties": {
+                                "opted_state": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "rewardExpirations": {
+                            "properties": {
+                                "opted_state": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

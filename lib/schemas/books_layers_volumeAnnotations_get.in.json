@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "annotationId": {
+            "required": true,
+            "type": "string"
+        },
+        "layerId": {
+            "required": true,
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

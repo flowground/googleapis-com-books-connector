@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "locale": {
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 40
+        },
+        "processingState": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "COMPLETED_FAILED",
+                    "COMPLETED_SUCCESS",
+                    "RUNNING"
+                ],
+                "type": "string"
+            }
+        },
+        "source": {
+            "type": "string"
+        },
+        "startIndex": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "volumeId": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

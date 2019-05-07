@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "cpksver": {
+            "required": true,
+            "type": "string"
+        },
+        "features": {
+            "type": "array",
+            "items": {
+                "enum": [
+                    "RENTALS"
+                ],
+                "type": "string"
+            }
+        },
+        "includeNonComicsSeries": {
+            "type": "boolean"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "nonce": {
+            "required": true,
+            "type": "string"
+        },
+        "showPreorders": {
+            "type": "boolean"
+        },
+        "source": {
+            "required": true,
+            "type": "string"
+        },
+        "volumeIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

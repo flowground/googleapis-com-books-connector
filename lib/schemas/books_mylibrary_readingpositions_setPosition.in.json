@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "action": {
+            "type": "string",
+            "enum": [
+                "bookmark",
+                "chapter",
+                "next-page",
+                "prev-page",
+                "scroll",
+                "search"
+            ]
+        },
+        "contentVersion": {
+            "type": "string"
+        },
+        "deviceCookie": {
+            "type": "string"
+        },
+        "position": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "timestamp": {
+            "required": true,
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

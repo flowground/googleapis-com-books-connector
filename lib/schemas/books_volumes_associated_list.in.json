@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "association": {
+            "type": "string",
+            "enum": [
+                "end-of-sample",
+                "end-of-volume",
+                "related-for-play"
+            ]
+        },
+        "locale": {
+            "type": "string"
+        },
+        "maxAllowedMaturityRating": {
+            "type": "string",
+            "enum": [
+                "mature",
+                "not-mature"
+            ]
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

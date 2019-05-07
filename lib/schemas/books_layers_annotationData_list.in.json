@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "annotationDataId": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "contentVersion": {
+            "required": true,
+            "type": "string"
+        },
+        "h": {
+            "type": "integer"
+        },
+        "layerId": {
+            "required": true,
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 200
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "scale": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "source": {
+            "type": "string"
+        },
+        "updatedMax": {
+            "type": "string"
+        },
+        "updatedMin": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "w": {
+            "type": "integer"
+        }
+    }
+}

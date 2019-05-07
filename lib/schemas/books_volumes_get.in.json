@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "type": "string"
+        },
+        "includeNonComicsSeries": {
+            "type": "boolean"
+        },
+        "partner": {
+            "type": "string"
+        },
+        "projection": {
+            "type": "string",
+            "enum": [
+                "full",
+                "lite"
+            ]
+        },
+        "source": {
+            "type": "string"
+        },
+        "user_library_consistent_read": {
+            "type": "boolean"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

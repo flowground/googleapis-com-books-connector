@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "allowWebDefinitions": {
+            "type": "boolean"
+        },
+        "annotationDataId": {
+            "required": true,
+            "type": "string"
+        },
+        "contentVersion": {
+            "required": true,
+            "type": "string"
+        },
+        "h": {
+            "type": "integer"
+        },
+        "layerId": {
+            "required": true,
+            "type": "string"
+        },
+        "locale": {
+            "type": "string"
+        },
+        "scale": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "w": {
+            "type": "integer"
+        }
+    }
+}

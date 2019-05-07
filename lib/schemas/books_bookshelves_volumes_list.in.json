@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "shelf": {
+            "required": true,
+            "type": "string"
+        },
+        "showPreorders": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "startIndex": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "userId": {
+            "required": true,
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

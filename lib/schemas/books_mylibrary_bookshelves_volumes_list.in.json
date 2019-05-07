@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "projection": {
+            "type": "string",
+            "enum": [
+                "full",
+                "lite"
+            ]
+        },
+        "q": {
+            "type": "string"
+        },
+        "shelf": {
+            "required": true,
+            "type": "string"
+        },
+        "showPreorders": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "startIndex": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

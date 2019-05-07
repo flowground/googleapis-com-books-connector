@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "androidId": {
+            "type": "string"
+        },
+        "device": {
+            "type": "string"
+        },
+        "manufacturer": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "offerId": {
+            "type": "string"
+        },
+        "product": {
+            "type": "string"
+        },
+        "serial": {
+            "type": "string"
+        },
+        "volumeId": {
+            "type": "string"
+        }
+    }
+}

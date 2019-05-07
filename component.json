@@ -1,0 +1,917 @@
+{
+    "title": "Books",
+    "description": "Searches for books and manages your Google Books library.",
+    "docsUrl": "https://developers.google.com/books/docs/v1/getting_started",
+    "url": "https://api.apis.guru/v2/specs/googleapis.com/books/v1/swagger.json",
+    "envVars": {
+        "OAUTH_CLIENT_ID": {
+            "description": "OAuth Client ID"
+        },
+        "OAUTH_CLIENT_SECRET": {
+            "description": "OAuth Client Secret"
+        }
+    },
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://www.googleapis.com/books/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "Oauth2": {
+                "label": "Oauth 2.0 authentication",
+                "viewClass": "OAuthFieldView"
+            }
+        },
+        "oauth2": {
+            "client_id": "{{OAUTH_CLIENT_ID}}",
+            "client_secret": "{{OAUTH_CLIENT_SECRET}}",
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth"
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "books_cloudloading_addBook": {
+            "main": "./lib/actions/books_cloudloading_addBook.js",
+            "title": "books_cloudloading_addBook",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_cloudloading_addBook.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_cloudloading_deleteBook": {
+            "main": "./lib/actions/books_cloudloading_deleteBook.js",
+            "title": "Remove the book and its contents",
+            "description": "Remove the book and its contents",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_cloudloading_deleteBook.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_cloudloading_updateBook": {
+            "main": "./lib/actions/books_cloudloading_updateBook.js",
+            "title": "books_cloudloading_updateBook",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_cloudloading_updateBook.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_dictionary_listOfflineMetadata": {
+            "main": "./lib/actions/books_dictionary_listOfflineMetadata.js",
+            "title": "Returns a list of offline dictionary metadata available",
+            "description": "Returns a list of offline dictionary metadata available",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_dictionary_listOfflineMetadata.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_familysharing_getFamilyInfo": {
+            "main": "./lib/actions/books_familysharing_getFamilyInfo.js",
+            "title": "Gets information regarding the family that the user is part of.",
+            "description": "Gets information regarding the family that the user is part of.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_familysharing_getFamilyInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_familysharing_share": {
+            "main": "./lib/actions/books_familysharing_share.js",
+            "title": "Initiates sharing of the content with the user's family. Empty response indicates success.",
+            "description": "Initiates sharing of the content with the user's family. Empty response indicates success.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_familysharing_share.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_familysharing_unshare": {
+            "main": "./lib/actions/books_familysharing_unshare.js",
+            "title": "Initiates revoking content that has already been shared with the user's family. Empty response indicates success.",
+            "description": "Initiates revoking content that has already been shared with the user's family. Empty response indicates success.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_familysharing_unshare.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_myconfig_getUserSettings": {
+            "main": "./lib/actions/books_myconfig_getUserSettings.js",
+            "title": "Gets the current settings for the user.",
+            "description": "Gets the current settings for the user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_myconfig_getUserSettings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_myconfig_releaseDownloadAccess": {
+            "main": "./lib/actions/books_myconfig_releaseDownloadAccess.js",
+            "title": "Release downloaded content access restriction.",
+            "description": "Release downloaded content access restriction.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_myconfig_releaseDownloadAccess.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_myconfig_requestAccess": {
+            "main": "./lib/actions/books_myconfig_requestAccess.js",
+            "title": "Request concurrent and download access restrictions.",
+            "description": "Request concurrent and download access restrictions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_myconfig_requestAccess.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_myconfig_syncVolumeLicenses": {
+            "main": "./lib/actions/books_myconfig_syncVolumeLicenses.js",
+            "title": "Request downloaded content access for specified volumes on the My eBooks shelf.",
+            "description": "Request downloaded content access for specified volumes on the My eBooks shelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_myconfig_syncVolumeLicenses.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_myconfig_updateUserSettings": {
+            "main": "./lib/actions/books_myconfig_updateUserSettings.js",
+            "title": "Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.",
+            "description": "Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_myconfig_updateUserSettings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_annotations_list": {
+            "main": "./lib/actions/books_mylibrary_annotations_list.js",
+            "title": "Retrieves a list of annotations, possibly filtered.",
+            "description": "Retrieves a list of annotations, possibly filtered.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_annotations_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_annotations_insert": {
+            "main": "./lib/actions/books_mylibrary_annotations_insert.js",
+            "title": "Inserts a new annotation.",
+            "description": "Inserts a new annotation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_annotations_insert.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_annotations_summary": {
+            "main": "./lib/actions/books_mylibrary_annotations_summary.js",
+            "title": "Gets the summary of specified layers.",
+            "description": "Gets the summary of specified layers.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_annotations_summary.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_annotations_delete": {
+            "main": "./lib/actions/books_mylibrary_annotations_delete.js",
+            "title": "Deletes an annotation.",
+            "description": "Deletes an annotation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_annotations_delete.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_annotations_update": {
+            "main": "./lib/actions/books_mylibrary_annotations_update.js",
+            "title": "Updates an existing annotation.",
+            "description": "Updates an existing annotation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_annotations_update.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_list": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_list.js",
+            "title": "Retrieves a list of bookshelves belonging to the authenticated user.",
+            "description": "Retrieves a list of bookshelves belonging to the authenticated user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_get": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_get.js",
+            "title": "Retrieves metadata for a specific bookshelf belonging to the authenticated user.",
+            "description": "Retrieves metadata for a specific bookshelf belonging to the authenticated user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_addVolume": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_addVolume.js",
+            "title": "Adds a volume to a bookshelf.",
+            "description": "Adds a volume to a bookshelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_addVolume.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_clearVolumes": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_clearVolumes.js",
+            "title": "Clears all volumes from a bookshelf.",
+            "description": "Clears all volumes from a bookshelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_clearVolumes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_moveVolume": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_moveVolume.js",
+            "title": "Moves a volume within a bookshelf.",
+            "description": "Moves a volume within a bookshelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_moveVolume.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_removeVolume": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_removeVolume.js",
+            "title": "Removes a volume from a bookshelf.",
+            "description": "Removes a volume from a bookshelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_removeVolume.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_bookshelves_volumes_list": {
+            "main": "./lib/actions/books_mylibrary_bookshelves_volumes_list.js",
+            "title": "Gets volume information for volumes on a bookshelf.",
+            "description": "Gets volume information for volumes on a bookshelf.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_bookshelves_volumes_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_readingpositions_get": {
+            "main": "./lib/actions/books_mylibrary_readingpositions_get.js",
+            "title": "Retrieves my reading position information for a volume.",
+            "description": "Retrieves my reading position information for a volume.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_readingpositions_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_mylibrary_readingpositions_setPosition": {
+            "main": "./lib/actions/books_mylibrary_readingpositions_setPosition.js",
+            "title": "Sets my reading position information for a volume.",
+            "description": "Sets my reading position information for a volume.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_mylibrary_readingpositions_setPosition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_notification_get": {
+            "main": "./lib/actions/books_notification_get.js",
+            "title": "Returns notification details for a given notification id.",
+            "description": "Returns notification details for a given notification id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_notification_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_onboarding_listCategories": {
+            "main": "./lib/actions/books_onboarding_listCategories.js",
+            "title": "List categories for onboarding experience.",
+            "description": "List categories for onboarding experience.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_onboarding_listCategories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_onboarding_listCategoryVolumes": {
+            "main": "./lib/actions/books_onboarding_listCategoryVolumes.js",
+            "title": "List available volumes under categories for onboarding experience.",
+            "description": "List available volumes under categories for onboarding experience.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_onboarding_listCategoryVolumes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_personalizedstream_get": {
+            "main": "./lib/actions/books_personalizedstream_get.js",
+            "title": "Returns a stream of personalized book clusters",
+            "description": "Returns a stream of personalized book clusters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_personalizedstream_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_promooffer_accept": {
+            "main": "./lib/actions/books_promooffer_accept.js",
+            "title": "books_promooffer_accept",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_promooffer_accept.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_promooffer_dismiss": {
+            "main": "./lib/actions/books_promooffer_dismiss.js",
+            "title": "books_promooffer_dismiss",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_promooffer_dismiss.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_promooffer_get": {
+            "main": "./lib/actions/books_promooffer_get.js",
+            "title": "Returns a list of promo offers available to the user",
+            "description": "Returns a list of promo offers available to the user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_promooffer_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_series_get": {
+            "main": "./lib/actions/books_series_get.js",
+            "title": "Returns Series metadata for the given series ids.",
+            "description": "Returns Series metadata for the given series ids.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_series_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_series_membership_get": {
+            "main": "./lib/actions/books_series_membership_get.js",
+            "title": "Returns Series membership data given the series id.",
+            "description": "Returns Series membership data given the series id.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_series_membership_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_bookshelves_list": {
+            "main": "./lib/actions/books_bookshelves_list.js",
+            "title": "Retrieves a list of public bookshelves for the specified user.",
+            "description": "Retrieves a list of public bookshelves for the specified user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_bookshelves_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_bookshelves_get": {
+            "main": "./lib/actions/books_bookshelves_get.js",
+            "title": "Retrieves metadata for a specific bookshelf for the specified user.",
+            "description": "Retrieves metadata for a specific bookshelf for the specified user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_bookshelves_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_bookshelves_volumes_list": {
+            "main": "./lib/actions/books_bookshelves_volumes_list.js",
+            "title": "Retrieves volumes in a specific bookshelf for the specified user.",
+            "description": "Retrieves volumes in a specific bookshelf for the specified user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_bookshelves_volumes_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_list": {
+            "main": "./lib/actions/books_volumes_list.js",
+            "title": "Performs a book search.",
+            "description": "Performs a book search.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_mybooks_list": {
+            "main": "./lib/actions/books_volumes_mybooks_list.js",
+            "title": "Return a list of books in My Library.",
+            "description": "Return a list of books in My Library.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_mybooks_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_recommended_list": {
+            "main": "./lib/actions/books_volumes_recommended_list.js",
+            "title": "Return a list of recommended books for the current user.",
+            "description": "Return a list of recommended books for the current user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_recommended_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_recommended_rate": {
+            "main": "./lib/actions/books_volumes_recommended_rate.js",
+            "title": "Rate a recommended book for the current user.",
+            "description": "Rate a recommended book for the current user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_recommended_rate.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_useruploaded_list": {
+            "main": "./lib/actions/books_volumes_useruploaded_list.js",
+            "title": "Return a list of books uploaded by the current user.",
+            "description": "Return a list of books uploaded by the current user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_useruploaded_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_get": {
+            "main": "./lib/actions/books_volumes_get.js",
+            "title": "Gets volume information for a single volume.",
+            "description": "Gets volume information for a single volume.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_volumes_associated_list": {
+            "main": "./lib/actions/books_volumes_associated_list.js",
+            "title": "Return a list of associated books.",
+            "description": "Return a list of associated books.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_volumes_associated_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_volumeAnnotations_list": {
+            "main": "./lib/actions/books_layers_volumeAnnotations_list.js",
+            "title": "Gets the volume annotations for a volume and layer.",
+            "description": "Gets the volume annotations for a volume and layer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_volumeAnnotations_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_volumeAnnotations_get": {
+            "main": "./lib/actions/books_layers_volumeAnnotations_get.js",
+            "title": "Gets the volume annotation.",
+            "description": "Gets the volume annotation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_volumeAnnotations_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_annotationData_list": {
+            "main": "./lib/actions/books_layers_annotationData_list.js",
+            "title": "Gets the annotation data for a volume and layer.",
+            "description": "Gets the annotation data for a volume and layer.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_annotationData_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_annotationData_get": {
+            "main": "./lib/actions/books_layers_annotationData_get.js",
+            "title": "Gets the annotation data.",
+            "description": "Gets the annotation data.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_annotationData_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_list": {
+            "main": "./lib/actions/books_layers_list.js",
+            "title": "List the layer summaries for a volume.",
+            "description": "List the layer summaries for a volume.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "books_layers_get": {
+            "main": "./lib/actions/books_layers_get.js",
+            "title": "Gets the layer summary for a volume.",
+            "description": "Gets the layer summary for a volume.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/books_layers_get.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

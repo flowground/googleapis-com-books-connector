@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "shelf": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "volumeId": {
+            "required": true,
+            "type": "string"
+        },
+        "volumePosition": {
+            "required": true,
+            "type": "integer"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

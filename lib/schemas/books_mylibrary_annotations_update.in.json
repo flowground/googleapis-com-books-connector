@@ -1,0 +1,310 @@
+{
+    "type": "object",
+    "properties": {
+        "annotationId": {
+            "required": true,
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "afterSelectedText": {
+                    "description": "Anchor text after excerpt. For requests, if the user bookmarked a screen that has no flowing text on it, then this field should be empty.",
+                    "type": "string"
+                },
+                "beforeSelectedText": {
+                    "description": "Anchor text before excerpt. For requests, if the user bookmarked a screen that has no flowing text on it, then this field should be empty.",
+                    "type": "string"
+                },
+                "clientVersionRanges": {
+                    "description": "Selection ranges sent from the client.",
+                    "properties": {
+                        "cfiRange": {
+                            "description": "Range in CFI format for this annotation sent by client.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "contentVersion": {
+                            "description": "Content version the client sent in.",
+                            "type": "string"
+                        },
+                        "gbImageRange": {
+                            "description": "Range in GB image format for this annotation sent by client.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gbTextRange": {
+                            "description": "Range in GB text format for this annotation sent by client.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "imageCfiRange": {
+                            "description": "Range in image CFI format for this annotation sent by client.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "created": {
+                    "description": "Timestamp for the created time of this annotation.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "currentVersionRanges": {
+                    "description": "Selection ranges for the most recent content version.",
+                    "properties": {
+                        "cfiRange": {
+                            "description": "Range in CFI format for this annotation for version above.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "contentVersion": {
+                            "description": "Content version applicable to ranges below.",
+                            "type": "string"
+                        },
+                        "gbImageRange": {
+                            "description": "Range in GB image format for this annotation for version above.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "gbTextRange": {
+                            "description": "Range in GB text format for this annotation for version above.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "imageCfiRange": {
+                            "description": "Range in image CFI format for this annotation for version above.",
+                            "properties": {
+                                "endOffset": {
+                                    "description": "The offset from the ending position.",
+                                    "type": "string"
+                                },
+                                "endPosition": {
+                                    "description": "The ending position for the range.",
+                                    "type": "string"
+                                },
+                                "startOffset": {
+                                    "description": "The offset from the starting position.",
+                                    "type": "string"
+                                },
+                                "startPosition": {
+                                    "description": "The starting position for the range.",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "data": {
+                    "description": "User-created data for this annotation.",
+                    "type": "string"
+                },
+                "deleted": {
+                    "description": "Indicates that this annotation is deleted.",
+                    "type": "boolean"
+                },
+                "highlightStyle": {
+                    "description": "The highlight style for this annotation.",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Id of this annotation, in the form of a GUID.",
+                    "type": "string"
+                },
+                "kind": {
+                    "default": "books#annotation",
+                    "description": "Resource type.",
+                    "type": "string"
+                },
+                "layerId": {
+                    "description": "The layer this annotation is for.",
+                    "type": "string"
+                },
+                "layerSummary": {
+                    "properties": {
+                        "allowedCharacterCount": {
+                            "description": "Maximum allowed characters on this layer, especially for the \"copy\" layer.",
+                            "format": "int32",
+                            "type": "integer"
+                        },
+                        "limitType": {
+                            "description": "Type of limitation on this layer. \"limited\" or \"unlimited\" for the \"copy\" layer.",
+                            "type": "string"
+                        },
+                        "remainingCharacterCount": {
+                            "description": "Remaining allowed characters on this layer, especially for the \"copy\" layer.",
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                },
+                "pageIds": {
+                    "description": "Pages that this annotation spans.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "selectedText": {
+                    "description": "Excerpt from the volume.",
+                    "type": "string"
+                },
+                "selfLink": {
+                    "description": "URL to this resource.",
+                    "type": "string"
+                },
+                "updated": {
+                    "description": "Timestamp for the last time this annotation was modified.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "volumeId": {
+                    "description": "The volume that this annotation belongs to.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

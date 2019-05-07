@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "download": {
+            "type": "string",
+            "enum": [
+                "epub"
+            ]
+        },
+        "filter": {
+            "type": "string",
+            "enum": [
+                "ebooks",
+                "free-ebooks",
+                "full",
+                "paid-ebooks",
+                "partial"
+            ]
+        },
+        "langRestrict": {
+            "type": "string"
+        },
+        "libraryRestrict": {
+            "type": "string",
+            "enum": [
+                "my-library",
+                "no-restrict"
+            ]
+        },
+        "maxAllowedMaturityRating": {
+            "type": "string",
+            "enum": [
+                "mature",
+                "not-mature"
+            ]
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 40
+        },
+        "orderBy": {
+            "type": "string",
+            "enum": [
+                "newest",
+                "relevance"
+            ]
+        },
+        "partner": {
+            "type": "string"
+        },
+        "printType": {
+            "type": "string",
+            "enum": [
+                "all",
+                "books",
+                "magazines"
+            ]
+        },
+        "projection": {
+            "type": "string",
+            "enum": [
+                "full",
+                "lite"
+            ]
+        },
+        "q": {
+            "required": true,
+            "type": "string"
+        },
+        "showPreorders": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "startIndex": {
+            "type": "integer",
+            "minimum": 0
+        }
+    }
+}

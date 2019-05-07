@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "contentVersion": {
+            "type": "string"
+        },
+        "layerId": {
+            "type": "string"
+        },
+        "layerIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "maxResults": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 40
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "showDeleted": {
+            "type": "boolean"
+        },
+        "source": {
+            "type": "string"
+        },
+        "updatedMax": {
+            "type": "string"
+        },
+        "updatedMin": {
+            "type": "string"
+        },
+        "volumeId": {
+            "type": "string"
+        }
+    }
+}

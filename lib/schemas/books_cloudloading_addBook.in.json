@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "drive_document_id": {
+            "type": "string"
+        },
+        "mime_type": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "upload_client_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}
