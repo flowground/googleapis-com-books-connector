@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the Books API (version v1).
 
 Generated from: https://api.apis.guru/v2/specs/googleapis.com/books/v1/swagger.json<br/>
-Generated at: 2019-05-23T12:13:02+03:00
+Generated at: 2019-06-11T18:14:34+03:00
 
 ## API Description
 
